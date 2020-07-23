@@ -19,6 +19,9 @@
           <li class="nav-item">
             <%= link_to "マイページ", user_path(current_user), class: "nav-link" %>
           </li>
+          <li>
+            <%= link_to "サインアウト", destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action" %>
+          </li>
         </ul>
       </div>
     </div>
