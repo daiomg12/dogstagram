@@ -9,4 +9,8 @@ class Post < ApplicationRecord
     Like.find_by(user_id: user.id, post_id: id)
   end
 
+  def favorite_by(user)
+    Favorite.find_by(user_id: user.id, post_id: id)
+  end
+
 end
