@@ -26,21 +26,13 @@
           <div class="row parts">
 
             <div id="like-icon-post-<%= post.id.to_s %>">
-              <% if post.liked_by(current_user).present? %>
-                <%= link_to "いいねを取り消す", post_like_path(post.id, post.liked_by(current_user)), method: :DELETE, remote: true, class: "loved hide-text" %>
-              <% else %>
-                <%= link_to "いいね", post_likes_path(post), method: :POST, remote: true, class: "love hide-text" %>
-              <% end %>
+              <%= render 'like_icon', { post: post } %>
             </div>
 
             <%= link_to "", "#", class: "comment" %>
 
             <div id="star-icon-post-<%= post.id.to_s %>">
-              <% if post.favorite_by(current_user).present? %>
-                <%= link_to "お気に入りを取り消す", post_favorite_path(post.id, post.favorite_by(current_user)), method: :DELETE, remote: true, class: "favorite hide-text" %>
-              <% else %>
-                <%= link_to "お気に入り", post_favorites_path(post), method: :POST, remote: true, class: "star hide-text" %>
-              <% end %>
+              <%= render 'favorite_icon', { post: post } %>
             </div>
           </div>
 
@@ -60,11 +52,7 @@
 
             <hr>
             <div class="row actions" id="comment-form-post-<%= post.id.to_s %>">
-              <%= form_with model: [post, Comment.new], class: "w-100" do |f| %>
-                <%= f.hidden_field :user_id, value: current_user.id %>
-                <%= f.hidden_field :post_id, value: post.id %>
-                <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント ...", autocomplete: :off %>
-              <% end %>
+              <%= render 'comment_form', { post: post } %>
 
             </div>
           </div>
