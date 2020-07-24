@@ -1,0 +1,2 @@
+$('#star-icon-post-<%= @post.id.to_s %>').
+  html('<%= link_to "お気に入りを取り消す", post_favorites_path(@post), method: :POST, remote: true, class: "star hide-text" %>');
