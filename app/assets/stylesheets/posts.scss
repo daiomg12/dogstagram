@@ -41,6 +41,15 @@
   background-size: 40px !important;
 }
 
+.star {
+  margin-left: 8px;
+  background-image: image-url("parts10");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 360x;
+  background-size: 30px !important;
+}
+
 .post-time {
   margin:0;
   color:#999;
@@ -122,4 +131,13 @@
   float: right;
   margin: 5px 0 0 10px;
   background-size: 11px !important;
+}
+
+.favorite {
+  margin-left: 8px;
+  background-image: image-url("parts11");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  background-size: 30px !important;
 }
