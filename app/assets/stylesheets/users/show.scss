@@ -31,3 +31,26 @@
     cursor: pointer;
   }
 }
+
+// tab
+.profile-tab {
+  margin-top: 60px;
+  .nav-tabs {
+    border: 0;
+    border-top: 1px solid #ddd;
+    .nav-item {
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid transparent;
+      margin-top: -1px;
+      padding: 10px;
+      background: transparent;
+      font-weight: bold;
+      color: #999;
+    }
+    .nav-item.active {
+      color: #262626;
+      border-top: 1px solid #262626;
+    }
+  }
+}

@@ -24,6 +24,11 @@ class PostsController < ApplicationController
   end
 
   def show
+    @photos = @post.photos
+    @likes = @post.likes.includes(:user)
+    @comment = Comment.new
+    @liked_by = @post.liked_by(current_user)
+    @favorite_by = @post.favorite_by(current_user)
   end
 
   def destroy
