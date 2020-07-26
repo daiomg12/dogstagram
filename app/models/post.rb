@@ -14,4 +14,11 @@ class Post < ApplicationRecord
     Favorite.find_by(user_id: user.id, post_id: id)
   end
 
+  def self.search(keyword)
+    if keyword
+      where('caption LIKE(?)', "%#{keyword}%")
+    else
+      nil
+    end
+  end
 end
