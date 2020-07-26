@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     controllers: { registrations: 'registrations' }
   root 'posts#index'
   get '/users/:id', to: 'users#show', as: 'user'
+  namespace :posts do
+    resources :searches, only: :index
+  end
   resources :posts, only: [:index, :new, :create, :show, :destroy] do
     resources :photos, only: [:create]
     resources :likes, only: [:create, :destroy]
