@@ -38,10 +38,10 @@
   </div>
   <div class="profile-tab">
     <%if @user == current_user %>
-    <nav>
+    <nav class="mb-5">
       <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-posts-tab" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-posts" aria-selected="true">posts</a>
-        <a class="nav-item nav-link" id="nav-favorites-tab" data-toggle="tab" href="#nav-favorites" role="tab" aria-controls="nav-favorites" aria-selected="false">favorites</a>
+        <a class="nav-item nav-link active" id="nav-posts-tab" data-toggle="tab" href="#nav-posts" role="tab" aria-controls="nav-posts" aria-selected="true">自分の投稿</a>
+        <a class="nav-item nav-link" id="nav-favorites-tab" data-toggle="tab" href="#nav-favorites" role="tab" aria-controls="nav-favorites" aria-selected="false">お気に入り</a>
       </div>
     </nav>
     <% end %>

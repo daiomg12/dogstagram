@@ -1,4 +1,4 @@
-<div class="col-md-10 col-md-offset-1 mx-auto postShow-wrap">
+<div class="col-md-10 mx-auto postShow-wrap">
   <div class="row post-wrap">
     <div class="col-md-8">
       <div class="card-left">
@@ -23,6 +23,7 @@
               <% end %>
             <% end %>
           </div>
+
           <div class="m-2">
             <strong>
               <%= @post.caption %>
@@ -36,10 +37,12 @@
             </div>
           </div>
         </div>
+
         <div class="row parts">
           <div id="like-icon-post-<%= @post.id.to_s %>">
             <%= render 'like_icon', { post: @post } %>
           </div>
+          <%= link_to "", "#", class: "comment" %>
           <div id="star-icon-post-<%= @post.id.to_s %>">
             <%= render 'favorite_icon', { post: @post } %>
           </div>
