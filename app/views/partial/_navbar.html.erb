@@ -1,7 +1,10 @@
 <header>
   <nav class="navbar p-3 navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-      <%= link_to "dogstagram", root_path, class: "navbar-brand" %>
+      <%= link_to root_path, class: "navbar-brand" do%>
+        <div class="logo-img"></div>
+      <% end %>
+
 
       <%= form_tag posts_searches_path, method: :get, class: "form-inline ml-md-auto", id: "posts-search",remote: true do %>
         <%= text_field_tag :keyword, params[:keyword], placeholder: "投稿検索", class: "form-control mr-sm-2", autocomplete: "off" %>
