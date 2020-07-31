@@ -6,6 +6,7 @@
         <p class="text-secondary">愛犬家のための写真・情報交換コミュニティ</p>
       </div>
       <%= form_with scope: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
+        <%= render 'partial/devise_messages'%>
         <div class="form-group">
           <%= f.text_field :name, autofocus: true, placeholder: "ユーザーネーム", class: "form-control" %>
         </div>

@@ -14,11 +14,13 @@
     <div id="wrapper">
       <%= render 'partial/navbar' if current_user %>
 
-      <% if flash[:notice] %>
-        <div class="alert alert-info"><%= flash[:notice] %></div>
-      <% end %>
-      <% if flash[:alert] %>
-        <div class="alert alert-danger"><%= flash[:alert] %></div>
+      <% if flash.any? %>
+        <script type="text/javascript">
+          <% flash.each do |key, value| %>
+            <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+            toastr.<%= type %>('<%= value %>')
+          <% end %>
+        </script>
       <% end %>
 
       <div class="container">
