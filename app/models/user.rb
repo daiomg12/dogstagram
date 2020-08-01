@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :favorites
 
+  mount_uploader :profile_photo, ImageUploader
+
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
