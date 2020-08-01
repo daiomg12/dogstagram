@@ -58,7 +58,7 @@
 
 
 ## ER図
-![dogstagram-Page-1](https://user-images.githubusercontent.com/65549551/88526960-916f7180-d037-11ea-9004-9f074bd2304b.png)
+![dogstagram-Page-1](https://user-images.githubusercontent.com/65549551/89100123-9e250880-d42f-11ea-8079-c3a8fa52a3e9.png)
 
 
 ## 参考アプリケーション
